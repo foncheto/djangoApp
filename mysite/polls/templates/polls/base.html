@@ -1,15 +1,28 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="/docs/4.1/assets/img/favicons/favicon.ico">
     <title>ALOOOO</title>
+    <link type="text/css" href="{% static 'polls/bootstrap-4.3.1-dist/css/bootstrap.min.css' %}" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{% static 'polls/style.css' %}">
 </head>
 
 <body>
-    {% block content %}
-    {% endblock %}
+    {% include 'polls/header.html' %}
+    <div class="jumbotron">
+        <div class="container">
+            {% block content %}
+            {% endblock %}
+        </div>
+    </div>
+    {% include 'polls/footer.html' %}
+
 </body>
 
 </html>

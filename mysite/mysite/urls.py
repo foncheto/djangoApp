@@ -19,5 +19,7 @@ from django.urls import path, include  # add this line
 
 urlpatterns = [
     path("admin/", admin.site.urls),
-    path("polls/", include("polls.urls")),  # add this line to include the polls app
+    path(
+        "polls/", include("polls.urls"), name="polls"
+    ),  # add this line to include the polls app
 ]
